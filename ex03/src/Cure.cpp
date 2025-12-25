@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yafahfou <yafahfou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yassinefahfouhi <yassinefahfouhi@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 14:29:39 by yafahfou          #+#    #+#             */
-/*   Updated: 2025/12/24 14:37:13 by yafahfou         ###   ########.fr       */
+/*   Updated: 2025/12/25 21:32:38 by yassinefahf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Cure::~Cure() {}
 
 Cure &Cure::operator=(const Cure &obj)
 {
-    this->_type = obj._type;
+    (void)obj;
     return (*this);
 }
 

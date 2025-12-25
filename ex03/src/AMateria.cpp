@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yafahfou <yafahfou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yassinefahfouhi <yassinefahfouhi@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 13:54:56 by yafahfou          #+#    #+#             */
-/*   Updated: 2025/12/24 14:43:02 by yafahfou         ###   ########.fr       */
+/*   Updated: 2025/12/25 21:50:33 by yassinefahf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#include "../include/AMateria.hpp"
 
 AMateria::AMateria(): _type("") {}
 
@@ -21,7 +21,8 @@ AMateria::~AMateria(){}
 
 AMateria    &AMateria::operator=(const AMateria &obj)
 {
-   (void)obj;
+   if (this->_type == "")
+    this->_type = obj._type;
     return (*this);
 }
 

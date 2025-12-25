@@ -2,8 +2,8 @@ NAME=Interface
 CC=c++
 FLAGS=-Wall -Wextra -Werror -std=c++98
 OBJDIR = .obj
-SRCS= src/AMateria.cpp src/Ice.cpp
-HEADERS= include/AMateria.hpp include/ICharacter_hpp
+SRCS= src/AMateria.cpp src/Ice.cpp src/Cure.cpp src/Character.cpp src/MateriaSource.cpp src/main.cpp 
+HEADERS= include/AMateria.hpp include/ICharacter.hpp include/Character.hpp include/Cure.hpp include/Ice.hpp include/IMateriaSource.hpp include/MateriaSource.hpp
 OBJS=$(addprefix $(OBJDIR)/, $(SRCS:.cpp=.o))
 all: $(NAME)
 $(NAME): $(OBJS) $(HEADERS)

@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yafahfou <yafahfou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yassinefahfouhi <yassinefahfouhi@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 14:15:53 by yafahfou          #+#    #+#             */
-/*   Updated: 2025/12/24 14:16:23 by yafahfou         ###   ########.fr       */
+/*   Updated: 2025/12/25 21:47:02 by yassinefahf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../include/Character.hpp"
+#include "../include/MateriaSource.hpp"
+// #include "../include/"
 
 int main()
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yafahfou <yafahfou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yassinefahfouhi <yassinefahfouhi@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 14:51:20 by yafahfou          #+#    #+#             */
-/*   Updated: 2025/12/24 18:36:34 by yafahfou         ###   ########.fr       */
+/*   Updated: 2025/12/25 22:08:36 by yassinefahf      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ Character::Character(const Character &obj)
 
 Character   &Character::operator=(const Character &obj)
 {
-    delete[] (this->_slots);
+     for (unsigned int i = 0; i < this->_currentSize; i++)
+            delete this->_slots[i];
+    this->_currentSize = obj._currentSize;
     for (unsigned int i = 0; i < obj._currentSize; i++)
     {
         if (obj._slots[i]->getType() == "ice")
@@ -36,12 +38,13 @@ Character   &Character::operator=(const Character &obj)
 
 Character::~Character()
 {
-    delete[] (this->_slots);
+    for (unsigned int i = 0; i < this->_currentSize; i++)
+            delete this->_slots[i];
 }
 
 std::string const &Character::getName() const
 {
-    return (this->getName());
+    return (this->_name);
 }
 
 void Character::equip(AMateria *m)
@@ -60,7 +63,7 @@ void Character::equip(AMateria *m)
 
 void    Character::unequip(int idx)
 {
-    if (idx < 0 || idx > this->_currentSize || this->_currentSize == 0)
+    if (idx < 0 || idx > (int)this->_currentSize || this->_currentSize == 0)
     {
         std::cout<<"Nothing to unequip !"<<std::endl;
         return ;
